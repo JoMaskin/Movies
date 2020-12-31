@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorMovieBg">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/movie_details_padding"
+        tools:context=".ui.views.fragments.MovieDetailsFragment">
+
+        <TextView
+            android:id="@+id/movie_details_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/movie_details_title_margin_top"
+            android:theme="@style/DetailsTitleTextStyle"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Dawn of the Planet of the Apes" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/image_card_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/movie_details_image_margin_top"
+            android:backgroundTint="@color/colorPrimary"
+            app:cardCornerRadius="@dimen/movie_details_image_corner_radius"
+            app:cardElevation="@dimen/movie_details_image_elevation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/movie_details_title">
+
+            <ImageView
+                android:id="@+id/movie_details_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_movie_placeholder"
+                app:layout_constraintTop_toBottomOf="@id/movie_details_title"
+                tools:ignore="ContentDescription" />
+        </androidx.cardview.widget.CardView>
+
+        <CheckBox
+            android:id="@+id/favorite_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/image_card_view"
+            app:layout_constraintEnd_toEndOf="@id/image_card_view"
+            android:layout_marginTop="@dimen/movie_details_checkbox_margin_top"
+            android:button="@drawable/favorite_button_selector"/>
+
+        <LinearLayout
+            android:id="@+id/movies_details_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/movie_details_layout_margin_top"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="@id/image_card_view"
+            app:layout_constraintStart_toStartOf="@id/image_card_view"
+            app:layout_constraintTop_toBottomOf="@id/image_card_view">
+
+            <TextView
+                android:id="@+id/movie_details_rating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/DetailsTextStyle"
+                tools:text="" />
+
+            <TextView
+                android:id="@+id/movie_details_release_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/DetailsTextStyle"
+                tools:text="2020" />
+
+            <TextView
+                android:id="@+id/movie_overview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/DetailsOverviewTextStyle"
+                tools:text="Dawn of the Planet of the Apes" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

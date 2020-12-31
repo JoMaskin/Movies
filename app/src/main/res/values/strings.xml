@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Movies</string>
+    <string name="star_character">\u2730</string>
+    <string name="rating">Rating:</string>
+    <string name="release_year">Release year:</string>
+    <string name="overview">Overview:\n</string>
+    <string name="error_loading_data">Something went wrong, please try again</string>
+    <string name="open_favorite_list">Open favorite list</string>
+</resources>
